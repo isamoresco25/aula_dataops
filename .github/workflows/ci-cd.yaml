@@ -10,11 +10,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout do Código
-        uses: actions/checkout@v3
- 
+        uses: actions/checkout@v2
+
       - name: Configuração do Ambiente
         run: echo "Ambiente configurado"
  
+      - name: Configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.13'  # Ou qualquer versão >=3.13 necessária
+
       - name: Execução de Testes
         run: echo "Rodando testes..."
 
