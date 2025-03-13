@@ -35,3 +35,7 @@ jobs:
 
       - name: Instalar dependências
         run: poetry install --no-root
+
+      steps:
+      - name: Checkout do Código
+        uses: actions/checkout@v3
